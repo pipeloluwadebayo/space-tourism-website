@@ -40,7 +40,7 @@ ul {
 	padding: var(--size-sm-sm) 0;
 	border-bottom: 2px solid transparent;
 }
-.destination-list li {
+.destination-nav-list {
 	font-size: var(--size-sm-sm);
 }
 .destination-link:link,
