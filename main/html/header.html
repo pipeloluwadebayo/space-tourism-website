@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+				<g fill="none" fill-rule="evenodd">
+					<circle cx="24" cy="24" r="24" fill="#FFF" />
+					<path
+						fill="#0B0D17"
+						d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+					/>
+				</g>
+			</svg>
+			<nav class="header-nav">
+				<ul class="header-nav-list">
+					<li class="link-list">
+						<span class="nav-span">00</span>
+						<a
+							href="index.html"
+							class="link header-nav-link"
+							target="_blank"
+						>
+							home</a
+						>
+					</li>
+					<li class="link-list">
+						<span class="nav-span">01</span>
+						<a
+							href="destination.html"
+							class="link header-nav-link"
+							target="_blank"
+						>
+							Destination</a
+						>
+					</li>
+					<li class="link-list">
+						<span class="nav-span">02</span>
+						<a
+							href="crew.html"
+							class="link header-nav-link"
+							target="_blank"
+							>Crew</a
+						>
+					</li>
+					<li class="link-list">
+						<span class="nav-span">03</span>
+						<a
+							href="technology.html"
+							class="link header-nav-link"
+							target="_blank"
+						>
+							Technology</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<button class="btn-nav">
+				<ion-icon
+					class="nav-icon nav-open-icon"
+					name="menu-outline"
+				></ion-icon>
+				<ion-icon
+					class="nav-icon nav-close-icon"
+					name="close-outline"
+				></ion-icon>
+				<!-- <svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="21"
+				class="nav-icon nav-open-icon"
+			>
+				<g fill="#D0D6F9" fill-rule="evenodd">
+					<path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+				</g>
+			</svg> -->
+
+				<!-- <img
+				src="../assets/shared/icon-hamburger.svg"
+				alt="navigation menu icon"
+				class="nav-icon nav-open-icon menu"
+			/>
+			<img
+				src="../assets/shared/icon-close.svg"
+				alt="navigation close icon"
+				class="nav-icon nav-close-icon"
+			/> -->
+			</button>
+		</header>
+		<script>
+			const navBtn = document.querySelector('.btn-nav');
+			const headerEl = document.querySelector('.header');
+			console.log('close');
+			console.log(navBtn);
+
+			navBtn.addEventListener('click', function () {
+				console.log('open');
+				headerEl.classList.toggle('nav-open');
+			});
+			const parentEl = document.querySelectorAll('.link-list');
+			const element = document
+				.querySelector('.header-nav-list')
+				.getElementsByTagName('a');
+			const url = document.location.href;
+			for (let i = 0; i < parentEl.length; i++) {
+				if (url == element[i].href) {
+					parentEl[i].classList.add('current');
+				}
+			}
+			// ADD CLASS CURRENT TO HEADER NAV LINKS
+		</script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>

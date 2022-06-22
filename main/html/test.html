@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/destination.css" />
+		<title>Destination | Space tourism website</title>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(function () {
+				$('#header').load('header.html');
+			});
+	
+		</script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>   -->
+<script>  
+$(document).on('click', '.destination-nav ul li', function(){  
+  $(this).addClass('link-active').siblings().removeClass('link-active')  
+})  
+</script>
+
+	</head>
+	<body>
+		<div id="header"></div>
+		<main>		
+			<div class="destination-container grid grid--2-cols">
+				<div class="destination-box">
+				<p class="text-tertiary destination-title">
+					<span class="destination-number">01</span> pick your destination
+				</p>
+				<img src="../assets/destination/image-moon.webp" alt="image of the moon" class="destination-img">
+			</div>
+							<div class="destination">
+								<header class="destination-header">
+									<nav class="destination-nav">
+										<ul id="tabs" class="destination-nav-list">
+											<li
+												data-tab-value="#moon" id="planet1"
+												class="destination-nav-item"
+											>
+												<a href="#moon" class="link destination-link"
+													>moon</a
+												>
+											</li>
+											<li
+												data-tab-value="#mars" 
+												class="destination-nav-item"
+											>
+												<a href="#mars" class="link destination-link"
+													>mars</a
+												>
+											</li>
+											<li
+												data-tab-value="#europa" id="planet3"
+												class="destination-nav-item"
+											>
+												<a href="#europa" class="link destination-link"
+													>europa</a
+												>
+											</li>
+											<li
+												data-tab-value="#titan"
+												class="destination-nav-item"
+											>
+												<a href="#titan" class="link destination-link"
+													>titan</a
+												>
+											</li>
+										</ul>
+									</nav>
+								</header>
+
+<section id="moon" class="planet" data-tab-info>
+					<p class="text-primary ">moon</p>
+					<p class="text-secondary destination-text">
+						See our planet as you’ve never seen it before. A
+						perfect relaxing trip away to help regain
+						perspective and come back refreshed. While you’re
+						there, take in some history by visiting the Luna 2
+						and Apollo 11 landing sites.
+					</p>
+					<div class="line"></div>
+					<footer class="destination-footer">
+						<div>
+							<span >Avg. distance</span>
+							<span class="distance">384,400 km</span>
+						</div>
+						<div>
+							<span>Est. travel time</span>
+							<span class="travel">3 days</span>
+						</div>
+					</footer>
+					
+                </section>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="../script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+/* 656px */
+@media (max-width: 37em) {
+	.btn-nav {
+		display: block;
+		z-index: 9999;
+	}
+	.nav-icon {
+		color: var(--color-primary);
+		height: 4.8rem;
+		width: 4.8rem;
+		/* transform: translateX(-100%); */
+	}
+	.nav-open-icon {
+		display: block;
+	}
+	.nav-close-icon {
+		display: none;
+	}
+	.header {
+		transition: none;
+		margin-top: 0;
+	}
+	.header svg {
+		margin-top: 2.4rem;
+	}
+	.header-nav {
+		position: sticky;
+		justify-self: center;
+		flex: 0 0 100%;
+		position: absolute;
+		top: 0 !important;
+		left: 25%;
+		width: 100%;
+		max-height: 100vh;
+		height: 100%;
+		backdrop-filter: blur(81.5485px);
+		flex-direction: column;
+		align-items: start;
+		transform: translateX(100%);
+		transition: all 0.5s ease-out;
+		/* hide element visiually */
+		opacity: 0;
+		/* make it inaccessible to mouse and workflow */
+		pointer-events: none;
+		/* hide from screen readers */
+		visibility: hidden;
+		z-index: 99;
+	}
+	.header-nav-list {
+		padding: 15rem 0 0 0;
+		flex-direction: column;
+		align-items: start;
+		gap: 6.4rem;
+		font-size: var(--size-sm);
+	}
+	/* .header-nav-list li {
+		padding: 0;
+	} */
+	.nav-open .header-nav {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateX(0);
+	}
+	.nav-open .nav-open-icon {
+		display: none;
+	}
+	.nav-open .nav-close-icon {
+		display: block;
+	}
+}

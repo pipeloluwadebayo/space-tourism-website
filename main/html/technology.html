@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/technology.css" />
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(function () {
+				$('#header').load('header.html');
+			});
+		</script>
+		<script>
+			$(document).on('click', '.num-box', function () {
+				$(this)
+					.addClass('tech-active')
+					.siblings()
+					.removeClass('tech-active');
+			});
+		</script>
+		<title>Technologies | Space tourism website</title>
+	</head>
+	<body>
+		<div id="header"></div>
+		<p class="text-tertiary tech-title">
+			<span class="number">03 </span>Space launch 101
+		</p>
+		<div class="tech grid grid--2-cols">
+			<div class="tech-details">
+				<div class="tech-box">
+					<div class="numbers">
+						<div class="num-box tech-active" title="Spaceport">
+							<p>1</p>
+						</div>
+						<div class="num-box" title="Space Capsule">
+							<p>2</p>
+						</div>
+						<div class="num-box" title="Space Vehicle">
+							<p>3</p>
+						</div>
+					</div>
+					<div class="tech-description">
+						<p class="text-small">The terminology...</p>
+						<p class="tech-name name">Spaceport</p>
+						<p class="tech-text text-secondary">
+							A spaceport or cosmodrome is a site for
+							launching (or receiving) spacecraft, by analogy
+							to the seaport for ships or airport for
+							aircraft. Based in the famous Cape Canaveral,
+							our spaceport is ideally situated to take
+							advantage of the Earth’s rotation for launch.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="tech-image-box">
+				<img
+					src="../assets/technology/image-spaceport-portrait.jpg"
+					alt=""
+					class="tech-img"
+				/>
+			</div>
+		</div>
+	</body>
+	<script src="../script.js"></script>
+	<script>
+		const clickNumber = document.querySelectorAll('.num-box');
+		const tech = document.querySelector('.tech-name');
+		const techDescription = document.querySelector('.tech-text');
+		const techImage = document.querySelector('.tech-img');
+		const destinationWindow = window.matchMedia('(max-width: 66em)');
+		const changeImage = function (window) {
+			if (destinationWindow.matches) {
+				techImage.src = spacePort.images.landscape;
+			}
+		};
+		changeImage(destinationWindow);
+		clickNumber.forEach((num, i) => {
+			num.addEventListener('click', e => {
+				e.preventDefault();
+				displayTechnology(technology[i]);
+				landscapeImages(technology[i]);
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,242 @@
+body {
+	background-image: url(../assets/home/background-home-desktop.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+header svg {
+	visibility: hidden;
+}
+.header-nav {
+	backdrop-filter: blur(81.5485px);
+}
+.header-nav::before {
+	content: '';
+	border-top: 1px solid var(--gray);
+	opacity: 0.4;
+	width: 45%;
+	transform: translate(-8%, 50%);
+}
+
+.home-grid {
+	grid-template-columns: 0.2fr 1fr;
+	column-gap: var(--size-sm);
+	align-items: center;
+}
+.home-text {
+	display: grid;
+	justify-content: center;
+	gap: var(--size-sm);
+	padding: var(--size-sm-md) 0;
+	padding-bottom: var(--size-sm-sm);
+}
+.explore-home {
+	justify-self: end;
+	align-self: end;
+	background-color: var(--white);
+	width: 20rem;
+	height: 20rem;
+	text-align: center;
+	border-radius: 50%;
+	position: relative;
+}
+.explore-home p {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--dark);
+	font-size: var(--size-sm-md);
+	position: absolute;
+	top: 50%;
+	right: 25%;
+	transform: translate(15%, -50%);
+}
+
+/* 1200px */
+@media (max-width: 75em) {
+	body {
+		background-color: rgba(255, 255, 255, 0.04);
+		background-image: url(../assets/home/background-home-desktop.jpg);
+	}
+	header svg {
+		visibility: visible;
+		margin-right: auto;
+		margin-left: var(--size-sm);
+		align-self: center;
+	}
+	.container {
+		max-width: 80%;
+		margin: var(--size-md-lg);
+		/* margin-top: var(--size-md); */
+	}
+	.header-nav::before {
+		display: none;
+	}
+	.header-nav {
+		flex: 0 0 50%;
+		background: rgba(255, 255, 255, 0.04);
+		backdrop-filter: blur(81.5485px);
+	}
+	.header-nav-list {
+		/* padding: var(--size-sm); */
+		justify-content: flex-start;
+	}
+}
+
+/* 903px */
+/* @media (max-width: 57em) {
+	html {
+		font-size: 50%;
+	}
+	.header-nav-list li {
+		font-size: var(--size-sm);
+	}
+	.container {
+		margin-top: var(--size-md-lg);
+	}
+	.space-text {
+		width: 80%;
+		font-size: 2.4rem;
+		justify-self: center;
+	}
+} */
+
+/* 1008px */
+@media (max-width: 63em) {
+	body {
+		background-image: url(../assets/home/background-home-tablet.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header-nav-list {
+		font-size: var(--size-sm-sm);
+		padding: var(--size-sm-sm);
+	}
+	.container {
+		margin-top: var(--size-md-lg);
+	}
+	.space-text {
+		width: 80%;
+		font-size: 2rem;
+		justify-self: center;
+	}
+	header svg {
+		visibility: visible;
+		margin-right: auto;
+		margin-left: var(--size-sm);
+	}
+	.container {
+		margin-top: var(--size-lg-xlg);
+	}
+	.text-tertiary {
+		font-size: 2rem;
+	}
+	/* .text-secondary {
+		font-size: 1.6rem;
+	} */
+	.text-primary {
+		font-size: var(--size-lg-xlg);
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+	.home-grid {
+		display: grid;
+		row-gap: 20rem;
+		/* gap: var(--size-sm-sm); */
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+	.home-text {
+		justify-self: center;
+		gap: var(--size-sm-sm);
+		text-align: center;
+		/* width: 80%; */
+	}
+
+	.explore-home {
+		width: 27.4rem;
+		height: 27.4rem;
+		text-align: center;
+		justify-self: center;
+	}
+	.explore-home p {
+		font-size: 3.2rem;
+
+		transform: translate(5%, -25%);
+	}
+}
+
+/* 850px */
+@media (max-width: 53em) {
+	html {
+		font-size: 50%;
+	}
+
+	.text-tertiary {
+		font-size: 2rem;
+	}
+}
+
+/* 752px */
+@media (max-width: 47em) {
+	.container {
+		margin-top: 2rem;
+	}
+	.text-primary {
+		font: size 15rem;
+	}
+	.text-secondary {
+		width: 70%;
+		justify-self: center;
+	}
+	.home-grid {
+		gap: 2rem;
+	}
+	.explore-home {
+		width: 18rem;
+		height: 18rem;
+	}
+	.explore-home p {
+		transform: translate(20%, -50%);
+	}
+}
+
+/* 592px */
+@media (max-width: 37em) {
+	html {
+		font-size: 40%;
+	}
+	body {
+		position: relative;
+		background: url('../assets/home/background-home-mobile.jpg')
+			no-repeat center center / cover;
+	}
+	.container {
+		margin-top: 3rem;
+	}
+	.text-primary {
+		font-size: 10rem;
+	}
+	.text-secondary {
+		font-size: 2rem;
+		width: 100%;
+		justify-self: center;
+	}
+	.home-grid {
+		gap: 5rem;
+	}
+	.explore-home {
+		width: 18rem;
+		height: 18rem;
+	}
+	.explore-home p {
+		font-size: 2.2rem;
+		transform: translate(12%, -50%);
+	}
+}
